@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapa</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <h1 id="mapTitle">Mapa</h1>
+  <span id="pointsCount">0 pontos cadastrados</span>
+</header>
+
+<div class="main">
+  <div id="map"></div>
+
+  <section class="points-section">
+    <h2>Novo ponto</h2>
+
+    <input id="pointName" placeholder="Nome do ponto" />
+    <input id="latInput" placeholder="Latitude" disabled />
+    <input id="lngInput" placeholder="Longitude" disabled />
+
+    <button id="savePointBtn">Salvar ponto</button>
+
+    <hr />
+
+    <h2>Pontos salvos</h2>
+    <ul id="pointsList"></ul>
+
+    <button id="deletePointsBtn" class="danger">
+      Excluir todos os pontos
+    </button>
+  </section>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="map.js" defer></script>
+
+<!-- MODAL EXCLUIR -->
+<div id="deletePointModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Excluir ponto</h3>
+    <p>Deseja realmente excluir este ponto?</p>
+    <div class="modal-actions">
+      <button id="cancelDeletePoint">Cancelar</button>
+      <button id="confirmDeletePoint" class="danger">Excluir</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EDITAR -->
+<div id="editPointModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Editar ponto</h3>
+    <input id="editPointInput" placeholder="Novo nome do ponto" />
+    <div class="modal-actions">
+      <button id="cancelEditPoint">Cancelar</button>
+      <button id="confirmEditPoint">Salvar</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

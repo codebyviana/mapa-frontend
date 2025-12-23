@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+}
+
+/* TELA 1 */
+
+.page-maps {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, Arial, sans-serif;
+  color: #0A747C;
+}
+.page-maps .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #0A747C;
+  color: white;
+  flex-shrink: 0;
+}
+
+.page-maps .title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-maps .logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.page-maps .controls {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.page-maps .controls input,
+.page-maps .controls select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* BOTÕES */
+.page-maps button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-maps button.danger {
+  background: #c0392b;
+  color: white;
+}
+
+
+.maps-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* LISTA */
+.page-maps #mapsList {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.page-maps #mapsList li {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* MODAIS */
+.page-maps .modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.page-maps .modal.hidden {
+  display: none;
+}
+
+.page-maps .modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 6px;
+}
+
+.page-maps .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.page-maps .toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0A747C;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.page-maps .toast.hidden {
+  display: none;
+}
+
+/* TELA 2*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #0A747C;
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* MAPA */
+#map {
+  flex: 2;
+  height: 100%;
+}
+
+/* PAINEL */
+.points-section {
+  flex: 1;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  overflow-y: auto;
+  font-family: Inter, Arial, sans-serif;
+  color: #0A747C;
+}
+
+/* INPUTS */
+.points-section input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+/* BOTÕES */
+.points-section button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.points-section button.danger {
+  background: #c0392b;
+  color: white;
+}
+
+/* LISTA DE PONTOS */
+#pointsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#pointsList li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#pointsList li:hover {
+  background: #f2f2f2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button.small {
+  padding: 4px 8px;
+  font-size: 12px;
+  width: auto;
+}

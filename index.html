@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-maps">
+
+  <header class="top">
+    <div class="title-area">
+      <img
+        src="assets/logo.png"
+        alt="Logo mapa"
+        class="logo"
+      />
+      <h1>Meus mapas</h1>
+    </div>
+
+    <button id="openModalBtn">Criar mapa</button>
+  </header>
+
+  <div class="controls">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Pesquisar mapa..."
+    />
+
+    <select id="orderSelect">
+      <option value="created">Ordem de criação</option>
+      <option value="name">Ordem alfabética</option>
+    </select>
+  </div>
+
+  <div class="maps-container">
+    <ul id="mapsList">
+      <li>Carregando mapas...</li>
+    </ul>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Novo mapa</h2>
+
+      <input
+        type="text"
+        id="mapNameInput"
+        placeholder="Nome do mapa ou cidade"
+      />
+
+      <div class="modal-actions">
+        <button id="cancelBtn">Cancelar</button>
+        <button id="createBtn">Criar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Excluir mapa</h2>
+      <p>Tem certeza que deseja excluir este mapa?</p>
+
+      <div class="modal-actions">
+        <button id="cancelDeleteBtn">Cancelar</button>
+        <button id="confirmDeleteBtn" class="danger">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
