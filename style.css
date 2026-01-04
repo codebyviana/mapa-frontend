@@ -25,8 +25,9 @@ body {
   align-items: center;
   padding: 20px;
   background: #0A747C;
+  background: linear-gradient(100deg, #0A747C 5%, #11aab5 50%, #079dc7 100%);
   color: white;
-  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .page-maps .title-area {
@@ -47,8 +48,7 @@ body {
   padding: 15px 20px;
   border-bottom: 1px solid #ddd;
   flex-shrink: 0;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #fff;  
 }
 
 .page-maps .controls input,
@@ -70,6 +70,11 @@ body {
   background: #c0392b;
   color: white;
 }
+
+.page-maps button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} 
 
 
 .maps-container {
@@ -138,9 +143,37 @@ body {
   align-items: center;
   padding: 20px;
   background: #0A747C;
+  background: linear-gradient(100deg, #0A747C 5%, #11aab5 50%, #079dc7 100%);
   color: white;
   font-family: Inter, Arial, sans-serif;
 }
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.back::before {
+  content: '←';
+  margin-right: 6px;
+} 
 
 .main {
   display: flex;

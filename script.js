@@ -51,10 +51,18 @@ cancelBtn.onclick = () => {
 
 
 //  CRIAR MAPA
+const toggleCreateBtn = () => {
+  createBtn.disabled = !mapNameInput.value.trim();
+};
+
+mapNameInput.addEventListener('input', toggleCreateBtn);
+toggleCreateBtn();
+
 createBtn.onclick = async () => {
   const name = mapNameInput.value.trim();
   if (!name) return showToast('Informe o nome do mapa');
 
+  createBtn.disabled = true;
   try {
     const res = await fetch(`${API_URL}/maps`, {
       method: 'POST',
@@ -73,6 +81,8 @@ createBtn.onclick = async () => {
   } catch (err) {
     console.error(err);
     showToast('Erro ao criar mapa');
+  } finally {
+    createBtn.disabled = false;
   }
 };
 
