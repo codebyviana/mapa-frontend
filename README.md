@@ -30,6 +30,7 @@ O projeto foi desenvolvido como teste técnico, com foco em organização de có
    - É possível adicionar pontos clicando diretamente no mapa
    - Os pontos podem ser editados ou excluídos individualmente
    - Existe a opção de excluir todos os pontos do mapa
+7. Aperte no botão de voltar (ele te redirecionará para a tela 1)
 6. Ao voltar para a tela 1 atualize a página para mostrar o novo mapa cadastrado.
 ---
 
